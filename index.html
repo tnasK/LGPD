@@ -45,6 +45,22 @@
             <option>E-MAIL</option>
           </select>
 
+          <div id="terms">
+            <div> <p id="infoterms">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
+            qualquer momento, será possível editar ou remover tais dados.
+            <a href="http://ford.com.br/politica-de-privacidade/" >Termos e Condições</a> </p> </div>
+            <div id="checkbox">
+              <div>
+                <input id="agree" type="checkbox" onchange="verificterms()" required>
+                <p>Sim, li e concordo com vosso  <a href="http://ford.com.br/politica-de-privacidade/" >termos e condições</a></p>
+              </div>
+              <div>
+                <input id="agreed" type="checkbox" onchange="verificterms()">
+                <p>Sim, também quero receber descontos e novidades.</p>
+              </div>
+            </div>
+          </div>
+
           <button id="submit" >Enviar</button>
         </form>
       </div>

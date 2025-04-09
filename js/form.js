@@ -9,7 +9,21 @@ class Contato {
     }
 }
 
+function verificterms () {
+    let submitbtn = document.getElementById('submit')
+    let agreebtn = document.getElementById('agree')
+    if (agreebtn.checked) {
+        submitbtn.disable = "false"
+        submitbtn.style.background = "#1B357E"
+        
 
+    }
+    else {
+        submitbtn.disable = "true"
+        submitbtn.style.background = "gray"
+    };
+
+}
 
 function Post(form, event) {
     event.preventDefault();
