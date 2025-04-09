@@ -1,3 +1,4 @@
+verificterms()
 class Contato {
     constructor(nome, sobrenome, email, cpf, telefone, contato) {
         this.nome = nome;
@@ -24,6 +25,24 @@ function verificterms () {
     };
 
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const cpfInput = document.getElementById('cpf');
+    
+    cpfInput.addEventListener('input', function(e) {
+        let valor = e.target.value.replace(/\D/g, '');
+
+        if (valor.length > 11) valor = valor.slice(0, 11);
+
+        valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+        valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+        valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+        e.target.value = valor;
+    });
+});
 
 function Post(form, event) {
     event.preventDefault();
